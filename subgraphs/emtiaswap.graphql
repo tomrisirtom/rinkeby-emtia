@@ -1,0 +1,38 @@
+type EmtiaTeknoloji @entity {
+  id: ID!
+  totalAllocPoint: BigInt!
+  poolLength: BigInt!
+}
+
+type EmtiaTeknolojiPool @entity {
+  id: ID!
+  balance: BigInt!
+  lpToken: Bytes!
+  allocPoint: BigInt!
+  lastRewardBlock: BigInt!
+  accEmtiaPerShare: BigInt!
+  addedBlock: BigInt!
+  addedTs: BigInt!
+}
+
+type Timelock @entity {
+  id: ID!
+  description: String
+  value: BigInt!
+  eta: BigInt!
+  functionName: String!
+  data: String!
+  targetAddress: String!
+  isCanceled: Boolean!
+  isExecuted: Boolean!
+  createdBlock: BigInt!
+  createdTs: BigInt!
+  expiresTs: BigInt!
+  canceledBlock: BigInt
+  canceledTs: BigInt
+  executedBlock: BigInt
+  executedTs: BigInt
+  createdTx: String!
+  canceledTx: String
+  executedTx: String
+}

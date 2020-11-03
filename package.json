@@ -1,0 +1,22 @@
+{
+  "name": "emtiaswap",
+  "license": "MIT",
+  "version": "0.0.2",
+  "author": "EmtiaSwap",
+  "scripts": {
+    "codegen": "graph codegen",
+    "codegen:emtiaswap": "graph codegen subgraphs/emtiaswap.yaml",
+    "build": "graph build",
+    "build:emtiaswap": "graph build subgraphs/emtiaswap.yaml",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/",
+    "deploy:emtiaswap": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ emtiaswap/emtiaswap subgraphs/emtiaswap.yaml",
+    "create-local": "graph create --node http://localhost:8020/ /emtiaswap/emtiaswap",
+    "remove-local": "graph remove --node http://localhost:8020/ /emtiaswap/emtiaswap",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 /emtiaswap/emtiaswap"
+  },
+  "devDependencies": {
+    "@graphprotocol/graph-cli": "^0.18.0",
+    "@graphprotocol/graph-ts": "^0.18.0",
+    "typescript": "^3.5.2"
+  }
+}
